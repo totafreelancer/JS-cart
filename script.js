@@ -18,7 +18,7 @@ AddToCard.forEach(function(button) {
     const productName = button.parentElement.querySelector('.card-title').textContent;
     const productPrice = button.parentElement.querySelector('.card-price').textContent;
     const li = document.createElement('li');
-    li.textContent = productName + " " + productPrice;
+    li.textContent = productName +" " + "-" +" " + productPrice;
     selectedProducts.appendChild(li);
     sidePanel.style.right = '0';
   });
