@@ -3,7 +3,6 @@ const Clos = document.querySelectorAll('#Clos');
 const selectedProducts = document.getElementById('selected-products');
 const sidePanel = document.getElementById('side-panel');
 const AddToCard = document.querySelectorAll('.add-to-cart');
-const card_title = document.querySelectorAll('.card-title');
 
 let totalPrice = 0;
 
@@ -17,8 +16,9 @@ AddToCard.forEach(function(button) {
     totalPrice += price;
     updateTotalPrice();
     const productName = button.parentElement.querySelector('.card-title').textContent;
+    const productPrice = button.parentElement.querySelector('.card-price').textContent;
     const li = document.createElement('li');
-    li.textContent = productName;
+    li.textContent = productName + " " + productPrice;
     selectedProducts.appendChild(li);
     sidePanel.style.right = '0';
   });
