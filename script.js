@@ -75,6 +75,14 @@ AddToCartButtons.forEach(function(button) {
     });
 });
 
+// সাইড প্যানেলে ক্লিক করে ছাড়ার জন্য নিরাপদতা যোগ
+AddToCartButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+      sidePanel.style.right = '0px';
+      sidePanel.style.opacity = '1';
+  });
+});
+
 // "বন্ধ করুন" বাটনগুলি ত্রুটি সহ যোগ করা
 ClosButtons.forEach(function(button) {
     button.addEventListener('click', function() {
@@ -83,10 +91,4 @@ ClosButtons.forEach(function(button) {
     });
 });
 
-// সাইড প্যানেলে ক্লিক করে ছাড়ার জন্য নিরাপদতা যোগ
-document.addEventListener('click', function(event) {
-    if (!sidePanel.contains(event.target) && event.target !== selectedProducts) {
-        sidePanel.style.right = '0px';
-        sidePanel.style.opacity = '1';
-    }
-});
+
