@@ -72,7 +72,6 @@ AddToCartButtons.forEach(function(button) {
         const productName = button.parentElement.querySelector('.card-title').textContent;
         const productPrice = button.parentElement.querySelector('.card-price').textContent;
         addToCart(productName, productPrice);
-        sidePanel.style.right = '0';
     });
 });
 
